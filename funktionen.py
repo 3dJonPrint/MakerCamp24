@@ -1,23 +1,5 @@
-import gpiozero as gpio
-#import pins
-
-#motor pins
-rev_left_pin = 1
-for_left_pin = 7
-speed_left_pin = 12
-
-for_right_pin = 14
-rev_right_pin = 15
-speed_right_pin = 18
-
-#motor pins initalisirung
-for_left = gpio.DigitalOutputDevice(for_left_pin)
-rev_left = gpio.DigitalOutputDevice(rev_left_pin)
-speed_left = gpio.PWMOutputDevice(speed_left_pin)
-
-for_right = gpio.DigitalOutputDevice(for_left_pin)
-rev_right = gpio.DigitalInputDevice(rev_left_pin)
-speed_right = gpio.PWMOutputDevice(speed_left_pin)
+import gpiozero
+import pins
 
 #Fahrfunktion
 def drive(speed = 1.0, steer = 0.0):
