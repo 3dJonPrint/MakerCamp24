@@ -1,13 +1,12 @@
-from pyxboxcontroller import XboxController, XboxControllerState
+import xbox
 import gpiozero
 import funktionen as fu
 
-controller = XboxController(0)
+joy = xbox.Joystick()
 
 while True:
-    state: XboxControllerState = controller.state
+    l_x = joy.leftX()
+    l_y = joy.leftY()
 
-    left_stick_x: float = state.l_thumb_x
-    left_stick_y: float = state.l_thumb_y
-    fu.dirve(left_stick_x,left_stick_y)
-    print(left_stick_x, left_stick_y)
+    fu.dirve(l_x,l_y)
+    print(l_x, l_y)
