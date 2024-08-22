@@ -1,8 +1,8 @@
 import gpiozero as gpio
 
 #motor pins
-rev_left_pin = 7
-for_left_pin = 1
+rev_left_pin = 1
+for_left_pin = 7
 speed_left_pin = 12
 
 for_right_pin = 14
