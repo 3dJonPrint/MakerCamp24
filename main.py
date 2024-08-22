@@ -1,5 +1,5 @@
 import xbox
-import gpiozero as gpio
+import gpiozero
 #import funktionen as fu
 
 #motor pins
@@ -12,13 +12,13 @@ rev_right_pin = 15
 speed_right_pin = 18
 
 #motor pins initalisirung
-for_left = gpio.DigitalOutputDevice(for_left_pin)
-rev_left = gpio.DigitalOutputDevice(rev_left_pin)
-speed_left = gpio.PWMOutputDevice(speed_left_pin)
+for_left = gpiozero.DigitalOutputDevice(for_left_pin)
+rev_left = gpiozero.DigitalOutputDevice(rev_left_pin)
+speed_left = gpiozero.PWMOutputDevice(speed_left_pin)
 
-for_right = gpio.DigitalOutputDevice(for_left_pin)
-rev_right = gpio.DigitalInputDevice(rev_left_pin)
-speed_right = gpio.PWMOutputDevice(speed_left_pin)
+for_right = gpiozero.DigitalOutputDevice(for_left_pin)
+rev_right = gpiozero.DigitalInputDevice(rev_left_pin)
+speed_right = gpiozero.PWMOutputDevice(speed_left_pin)
 
 #Fahrfunktion
 def drive(speed = 1.0, steer = 0.0):
