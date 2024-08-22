@@ -1,6 +1,6 @@
 import xbox
 import gpiozero as gpio
-import funktionen as fu
+#import funktionen as fu
 
 #motor pins
 rev_left_pin = 1
