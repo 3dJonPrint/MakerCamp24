@@ -13,12 +13,6 @@ def drive(speed = 1.0, steer = 0.0, brake = False):
     right = -1.0*steer
   elif (speed == 0 and steer == 0):
     brake = True
-    pins.for_left.on()
-    pins.for_right.on()
-    pins.rev_left.on()
-    pins.rev_right.on()
-    left = 1
-    right = 1
   else:
     if steer < 0:
       left = map(steer, -1, 0, 0, speed)
@@ -49,6 +43,13 @@ def drive(speed = 1.0, steer = 0.0, brake = False):
     elif right < 0:
       pins.rev_right.on()
       pins.for_right.off()
+  else:
+    pins.for_left.on()
+    pins.for_right.on()
+    pins.rev_left.on()
+    pins.rev_right.on()
+    left = 1
+    right = 1
   print("MotSpeed: ",left,right)
   left = abs(left)
   right = abs(right)

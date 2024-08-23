@@ -10,10 +10,10 @@ rev_right_pin = 15
 speed_right_pin = 18
 
 #motor pins initalisirung:
-for_right = gpio.DigitalOutputDevice(for_right_pin)
-rev_right = gpio.DigitalOutputDevice(rev_right_pin)
-speed_right = gpio.PWMOutputDevice(speed_right_pin)
+for_right = gpio.DigitalOutputDevice(for_right_pin, initial_value=False)
+rev_right = gpio.DigitalOutputDevice(rev_right_pin, initial_value=False)
+speed_right = gpio.PWMOutputDevice(speed_right_pin, initial_value=1)
 
-for_left = gpio.DigitalOutputDevice(for_left_pin)
-rev_left = gpio.DigitalOutputDevice(rev_left_pin)
-speed_left = gpio.PWMOutputDevice(speed_left_pin)
+for_left = gpio.DigitalOutputDevice(for_left_pin, initial_value=False)
+rev_left = gpio.DigitalOutputDevice(rev_left_pin, initial_value=False)
+speed_left = gpio.PWMOutputDevice(speed_left_pin, initial_value=1)
