@@ -8,8 +8,9 @@ joy = xbox.Joystick()
 while True:
     l_x = joy.leftX()
     l_y = joy.leftY()
+    l = joy.left()
     #drive
-    fu.drive(l_y,l_x)
-    print(l_y, l_x)
+    fu.drive(l_y,l_x,l)
+    print(l_y, l_x,l)
 
     time.sleep(0.1)
