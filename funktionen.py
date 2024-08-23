@@ -2,9 +2,8 @@ import gpiozero
 import pins
 
 #Fahrfunktion:
-def drive(speed = 1.0, steer = 0.0):
+def drive(speed = 1.0, steer = 0.0, brake = False):
   print("speed:",speed,"steer",steer)
-  brake = False
   speed2 = speed
   speed = abs(speed)
   right = 0.0
@@ -43,6 +42,7 @@ def drive(speed = 1.0, steer = 0.0):
     elif left < 0:
       pins.rev_left.on()
       pins.for_left.off()
+    
     if right > 0:
       pins.for_right.on()
       pins.rev_right.off()
