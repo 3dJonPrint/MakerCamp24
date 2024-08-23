@@ -43,11 +43,11 @@ def drive(speed = 1.0, steer = 0.0):
       pins.rev_left.on()
       pins.for_left.off()
     if right > 0:
-      pins.for_right.on()
       pins.rev_right.off()
+      pins.for_right.on()
     elif right < 0:
-      pins.rev_right.on()
       pins.for_right.off()
+      pins.rev_right.on()
   print("MotSpeed: ",left,right)
   left = abs(left)
   right = abs(right)
