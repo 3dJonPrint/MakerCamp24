@@ -22,10 +22,10 @@ def drive(speed = 1.0, steer = 0.0):
     right = 1
   else:
     if steer < 0:
-      left = map(1+steer, -1, 0, 0, speed)
+      left = map(steer, -1, 0, 0, speed)
       right = speed
     elif steer > 0:
-      right = map(1-steer, 0, 1, speed, 0)
+      right = map(steer, 0, 1, 0, speed)
       left = speed
     elif steer == 0:
       left,right = speed,speed
