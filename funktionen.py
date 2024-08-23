@@ -13,10 +13,10 @@ def drive(speed = 1.0, steer = 0.0):
     right = -1.0*steer
   elif (speed == 0 and steer == 0):
     brake = True
-    for_left.on()
-    for_right.on()
-    rev_left.on()
-    rev_right.on()
+    pins.for_left.on()
+    pins.for_right.on()
+    pins.rev_left.on()
+    pins.rev_right.on()
     left = 1
     right = 1
   else:
@@ -37,23 +37,23 @@ def drive(speed = 1.0, steer = 0.0):
     right = right*i
   if not brake:
     if left > 0:
-      for_left.on()
-      rev_left.off()
+      pins.for_left.on()
+      pins.rev_left.off()
     elif left < 0:
-      rev_left.on()
-      for_left.off()
+      pins.rev_left.on()
+      pins.for_left.off()
     if right > 0:
-      for_right.on()
-      rev_right.off()
+      pins.for_right.on()
+      pins.rev_right.off()
     elif right < 0:
-      rev_right.on()
-      for_right.off()
+      pins.rev_right.on()
+      pins.for_right.off()
   print("MotSpeed: ",left,right)
   left = abs(left)
   right = abs(right)
   print("MotContollSpeed: ",left,right)
-  speed_left.value = left
-  speed_right.value = right
+  pins.speed_left.value = left
+  pins.speed_right.value = right
 
 def map(x, in_min, in_max, out_min, out_max):
   # Berechnen des umgewandelten Werts
