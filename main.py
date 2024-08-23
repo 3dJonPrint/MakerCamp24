@@ -8,5 +8,5 @@ while True:
     l_x = joy.leftX()
     l_y = joy.leftY()
 
-    fu.drive(l_x,l_y)
-    print(l_x, l_y)
+    fu.drive(l_y,l_x)
+    print(l_y, l_x)

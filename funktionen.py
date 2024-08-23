@@ -3,6 +3,7 @@ import pins
 
 #Fahrfunktion
 def drive(speed = 1.0, steer = 0.0):
+  print("speed:",speed,"steer",steer)
   brake = False
   speed2 = speed
   speed = abs(speed)
