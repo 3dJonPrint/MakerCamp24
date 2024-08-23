@@ -54,6 +54,7 @@ def drive(speed = 1.0, steer = 0.0):
   print("MotContollSpeed: ",left,right)
   pins.speed_left.value = left
   pins.speed_right.value = right
+  print()
 
 def map(x, in_min, in_max, out_min, out_max):
   # Berechnen des umgewandelten Werts
