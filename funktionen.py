@@ -1,7 +1,7 @@
 import gpiozero
 import pins
 
-#Fahrfunktion
+#Fahrfunktion:
 def drive(speed = 1.0, steer = 0.0):
   print("speed:",speed,"steer",steer)
   brake = False

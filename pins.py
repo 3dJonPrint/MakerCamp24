@@ -9,7 +9,7 @@ for_right_pin = 14
 rev_right_pin = 15
 speed_right_pin = 18
 
-#motor pins initalisirung
+#motor pins initalisirung:
 for_right = gpio.DigitalOutputDevice(for_right_pin)
 rev_right = gpio.DigitalOutputDevice(rev_right_pin)
 speed_right = gpio.PWMOutputDevice(speed_right_pin)
